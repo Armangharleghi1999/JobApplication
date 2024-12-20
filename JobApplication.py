@@ -35,6 +35,8 @@ def get_gmail_service():
     service = build('gmail', 'v1', credentials=creds)
     return service
 
+    x
+
 def search_job_emails(service, query="subject:(application OR applied)"):
     query = 'subject:("thank you for applying" OR "application received") newer_than:365d'
     results = service.users().messages().list(userId='me', q=query).execute()
